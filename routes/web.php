@@ -30,7 +30,13 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('admin', function () {
-    return '<h1>Hello World</h1>';
+    return '<h1>Hello Admin</h1>';
 })->middleware(['auth', 'verified', 'role:admin']);
+
+
+Route::get('penulis', function () {
+    return '<h1>Hello Penulis</h1>';
+})->middleware(['auth', 'verified', 'role:penulis|admin']);
+
 
 require __DIR__ . '/auth.php';
