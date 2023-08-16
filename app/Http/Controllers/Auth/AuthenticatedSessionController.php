@@ -29,8 +29,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        $request->assignRole('penulis');
-
         return redirect()->intended(RouteServiceProvider::HOME);
     }
 
