@@ -39,4 +39,8 @@ Route::get('penulis', function () {
 })->middleware(['auth', 'verified', 'role:penulis|admin']);
 
 
+Route::get('tulisan', function () {
+    return '<h1>Tulisan Sederhana</h1>';
+})->middleware(['auth', 'verified', 'role_or_permission:lihat-tulisan|admin']);
+
 require __DIR__ . '/auth.php';

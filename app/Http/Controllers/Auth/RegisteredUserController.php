@@ -42,7 +42,9 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        $user->assignRole('penulis');
+        // $user->assignRole('penulis'); // memberikan role kepada user baru
+
+        $user->givePermissionTo('lihat-tulisan');
 
         event(new Registered($user));
 
