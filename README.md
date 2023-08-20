@@ -38,3 +38,7 @@ php artisan migrate
 
 ## Reference
 Laravel Spatie (https://spatie.be/)
+
+
+## Author 
+[Irfan Yasin](https://github.com/alirfanyasin)
